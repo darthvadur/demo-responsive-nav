@@ -1,0 +1,208 @@
+/* main stylesheet */
+
+* {
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    font-family: helvetica, arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+	line-height: 1.5;
+	font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+header {
+	position: relative;
+}
+
+h1 {
+	position: absolute;
+	margin: 0;
+	padding: 10px;
+ 	z-index: 100;
+    font-size: 28px;
+	line-height: 1;
+    text-shadow: 1px 1px 1px rgba(255,255,255,1);
+}
+
+.main-container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.content {
+	padding: 1%;
+}
+
+.content-img {
+	display: block;
+	margin: 20px auto;
+}
+
+
+footer {
+	border-top: 1px solid #000;
+}
+
+.acc-text {
+	position: absolute;
+	left: -9999px;
+}
+
+.nav {
+     background-color: #d5d5d5;
+     padding: 5px 10px 5px 10px;  
+     margin: 0; 
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.4)), to(rgba(255,255,255,0.1)));
+     background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+   	background-image:    -moz-linear-gradient(top, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+	background-image:      -o-linear-gradient(top, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+	background-image:         linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(255,255,255,0.1));  
+    border-bottom: 1px solid #ccc; 
+    position: relative;    
+}
+
+.nav-list {
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: background-color 0.5s ease-in;
+	-moz-transition: background-color 0.5s ease-in;
+	-o-transition: background-color 0.5s ease-in;
+	transition: background-color 0.5s ease-in;
+}
+  
+
+.nav-list > li > a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #666;
+    -webkit-transition: border-color 0.5s ease-in;
+	-moz-transition: border-color 0.5s ease-in;
+	-o-transition: border-color 0.5s ease-in;
+	transition: border-color 0.5s ease-in;
+}
+
+.no-touch .nav-list > li > a:hover, .nav-list > li > a:active {
+    background-color: #666;
+}
+
+.nav-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+    position: relative;
+    border-radius: 4px;
+    float: right;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.nav-button.selected {
+    border-color: rgba(0,0,0,0.15);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.7)), to(rgba(255,255,255,0.1)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.1));
+	background-image:    -moz-linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.1));
+	background-image:      -o-linear-gradient(top, rgba(255,255,255,0.7), rgba(255,255,255,0.1));
+	background-image:         linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.1));  
+}
+
+.nav-button:before {
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    width: 25px;
+    height: 5px;
+    border-width: 5px 0;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.85);
+    content: '';
+    display: block;
+}
+
+.nav-button:after {
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    width: 25px;
+    border-top: 5px solid rgba(0,0,0,0.85);
+    content: '';
+    display: block;
+}
+
+/* hidden nav styles */
+
+.nav-hidden {
+    position: absolute;
+    left: -9999px;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.nav-hidden > li > a {
+    border-color: transparent;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+	
+	h1 {
+		position: static;
+	}
+	
+	.content-img {
+		float: right;
+		margin: 0 0 20px 2%;
+	}
+	
+	.nav {
+		background: none;
+		border: none;
+	}
+	
+	.nav-button {
+	   visibility: hidden;
+	}
+	
+	.nav-list {
+		left: 0;
+		background-color: #333;
+		top: 0;
+		overflow: hidden;
+	}
+	
+	.nav-list > li {
+		float: left;
+	}
+	
+	.nav-list > li > a {
+		border-right: 1px solid #666;
+		padding: 10px 30px;
+	}
+	
+	.nav-list > li:last-child > a {
+		border-right: 0;
+	}
+	
+}
+​
